@@ -196,7 +196,7 @@ public class AIClient implements Runnable {
             if (currentBoard.moveIsPossible(move)) {
                 GameState copy = currentBoard.clone();
                 copy.makeMove(move);
-                int eval = miniMax(copy, 5, alpha, beta, true);
+                int eval = miniMax(copy, 10, alpha, beta, true);
                 if (eval > maxEval) {
                     maxEval = eval;
                     bestMove = move;
